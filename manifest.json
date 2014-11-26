@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "Baileys New Beers",
+  "description": "Highlights new beers in more obvious way.",
+  "version": "1.0",
+
+  "permissions": [
+    "http://www.baileystaproom.com/*"
+  ],
+
+
+  "content_scripts": [
+    {
+      "js": ["jquery.min.js", "app.js"],
+      "matches": ["http://www.baileystaproom.com/draft-list/"],
+      "run_at": "document_end",
+      "css": ["app.css"]
+    }
+  ]
+
+}
